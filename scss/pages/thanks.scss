@@ -1,0 +1,42 @@
+.thanks {
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include mq() {
+            padding-right: 2.5rem;
+            padding-left: 2.5rem;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__content {
+        margin-bottom: 3rem;
+
+        @include mq() {
+            margin-bottom: unset;
+        }
+
+
+        &__title {
+            font-size: 2.5rem;
+            font-weight: var(--font-extrabold);
+            line-height: var(--line-height);
+            margin-bottom: 2rem;
+        }
+
+        &__subtitle {
+            font-size: 1.25rem;
+            line-height: var(--line-height-text);
+        }
+    }
+
+    img {
+        width: 18rem;
+    }
+}

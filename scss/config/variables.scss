@@ -1,0 +1,22 @@
+:root {
+    --font-family: 'Inter', sans-serif;
+    --font-size: 1rem;
+    --font-regular: 400;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --color-primary: rgb(255 211 56);
+    --color-secondary: rgb(240 246 255);
+    --color-from: rgb(168 85 207);
+    --color-to: rgb(55 88 249);
+    --container-width: 72rem;
+    --border-radius: .5rem;
+    --box-shadow: 0 2px 14px 2px rgb(99 93 255 / 30%);
+    --section-spacing: 1.5rem;
+    --line-height: 1.25;
+    --line-height-text: 1.75;
+
+    @include mq() {
+    --section-spacing: 2.5rem;
+    }
+}

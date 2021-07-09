@@ -1,0 +1,17 @@
+.header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__name {
+            font-size: 1.5rem;
+            font-weight: var(--font-bold);
+            color: #000;
+            margin-left: 1rem;
+        }
+    }
+}

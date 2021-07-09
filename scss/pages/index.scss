@@ -1,0 +1,132 @@
+.hero {
+    line-height: var(--line-height);
+
+    @include mq() {
+		padding-right: 5rem;
+        padding-left: 5rem;
+	}
+
+    &-wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: var(--font-extrabold);
+        margin-bottom: 2.5rem;
+
+
+    @include mq() {
+        font-size: 3.5rem;
+	}
+    }
+
+    &__subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2.5rem;
+
+        @include mq() {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.cta__form {
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    flex-direction: column;
+
+    @include mq() {
+        flex-direction: row;
+    }
+
+    &__input {
+        border: none;
+        background-color: var(--color-secondary);
+        border-radius: var(--border-radius);
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+        min-width: 16rem;
+
+        @include mq() {
+            margin-bottom: unset;
+            margin-right: 1rem;
+            min-width: 22rem;
+        }
+    }
+}
+
+.list-wrapper {
+    position: relative;
+
+    .bg {
+        position: absolute;
+        right: -3rem;
+        top: -3rem;
+        z-index: -1;
+    }
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 8.5rem;
+		height: 10rem;
+		background-color: var(--color-to);
+		bottom: -3rem;
+		left: -3rem;
+        border-radius: var(--border-radius) calc(var(--border-radius) * 5);
+        z-index: -1;
+	}
+}
+
+.browser {
+    padding: 1.25rem 1.5rem;
+    background-color: #042a3a;
+    display: flex;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    position: relative;
+
+    &__toggle {
+        border-radius: var(--border-radius);
+        padding: .5rem;
+
+        &--red {
+            background-color: rgb(239, 68, 68);
+        }
+
+        &--yellow {
+            background-color: rgb(251, 191, 36);
+        }
+
+        &--green {
+            background-color: rgb(74,222,128);
+        }
+
+        & + & {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.table {
+    &-top {
+        background-color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .75rem 1.5rem;
+
+        @include mq() {
+            justify-content: unset;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__logo {
+        font-weight: var(--font-semibold);
+        text-align: center;
+        margin-left: 1rem;
+    }
+}

@@ -1,0 +1,41 @@
+{% layout 'master' %}
+{% block content %}
+<section class="section hero">
+    <div class="container">
+        <div class="hero-wrapper">
+            <h1 class="hero__title">Make free calls with <span class="mark">900+ people!</span>
+            </h1>
+            <p class="hero__subtitle">
+                A curated list to contact people who have free video call options.
+            </p>
+            <form class="cta__form" action="thanks.html">
+                <input type="email" class="cta__form__input" placeholder="👋 Enter your email" required>
+                </input>
+                {% include 'button-primary' with type: 'submit', title: 'Reach Full List for Free', btnStyle: 'gradient' %}
+            </form>
+        </div>
+    </div>
+</section>
+<section class="section list">
+    <div class="container">
+        <div class="list-wrapper">
+            <img loading ="lazy" class="bg" src="/img/bg.svg" alt="">
+            <div class="browser">
+                <span class="browser__toggle browser__toggle--red"></span>
+                <span class="browser__toggle browser__toggle--yellow"></span>
+                <span class="browser__toggle browser__toggle--green"></span>
+            </div>
+            <div class="table">
+                <div class="table-top">
+                    <svg class="icon icon-airtable table__airtable">
+                        <use xlink:href="#icon-airtable"></use>
+                    </svg>
+                    <p class="table__logo">Awesome Peers Preview
+                    </p>
+                </div>
+            </div>
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrtZbVUcywbJBe93?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        </div>
+    </div>
+</section>
+{% endblock %}

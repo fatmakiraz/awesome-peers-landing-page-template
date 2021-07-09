@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}{% endblock %}Awesome Peers</title>
+    <meta name="description" content="A list to make free calls with 900+ people!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    {% include 'svg-icons' %}
+    {% include 'header' %}
+    <main class="main">
+        {% block content %}
+        {% endblock %}
+    </main>
+    {% include 'footer' %}
+    {% block customJS %}
+    {% endblock %}
+</body>
+
+</html>
